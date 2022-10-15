@@ -18,17 +18,20 @@ int main(){
     if(n%2==0){
         return 0;
     }
-    for(i=0;i<n;i++){
-        for(j=0;j<i+1;j++){
+    for(i=0;i<n/2+1;i++){
+        for(j=1;j<=i;j++){
             cout<<"  ";
         }
-        for(j=2*(n-i)-1;j>=1;j--){
+        for(j=n-2*i;j>=1;j--){
             cout<<"* ";
         }
         cout<<endl;
     }
     for(i=1;i<=n;i++){
 
+        for(j=1;j<=n/2;j++){
+            cout<<"  ";
+        }
         for(j=1;j<=n;j++){
             if(i==1||j==1||j==n){
                 cout<<"@ ";
